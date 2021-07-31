@@ -1,19 +1,12 @@
 # decoy-link
 
-FIXME
-
-## Prerequisites
-
-You will need [Leiningen][] 2.0.0 or above installed.
-
-[leiningen]: https://github.com/technomancy/leiningen
+Create redirects with custom metadata that will result in 
 
 ## Running
 
-To start a web server for the application, run:
-
-    lein ring server
+TBA
 
 ## License
 
-Copyright © 2021 FIXME
+Copyright © 2021 JohnnyJayJay
+TBA
