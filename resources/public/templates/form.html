@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Create a Decoy Link{% endblock %}
+
+{% block body %}
+<form action="/generate">
+  <label for="title">Title:</label>
+  <br>
+  <input type="text" name="title">
+  <br>
+
+  <label for="desc">Description:</label>
+  <br>
+  <textarea name="desc" rows="4" cols="50"></textarea>
+  <br>
+
+  <label for="img">Image URL:</label>
+  <br>
+  <input type="url" name="img">
+  <br>
+
+  <label for="redirect">Redirect URL:</label>
+  <br>
+  <input type="url" name="redirect" required>
+
+  <p>
+    <input type="reset" value="Clear">
+    <input type="submit" value="Generate">
+  </p>
+</form>
+
+<h3>What does this do?</h3>
+<p>
+  Many services on the web offer link previews through website metadata.<br>
+  For example, if you share a link on WhatsApp, Twitter or Discord, you might see a title, short description and/or an image in the message.<br>
+  This website allows you to create links to websites that yield custom previews.
+</p>
+
+<h3>Why?</h3>
+<p>
+  To make a link look prettier. Or to rickroll your friends. I'll leave that decision up to you.
+</p>
+{% endblock %}

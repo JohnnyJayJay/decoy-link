@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Decoy Link Generated{% endblock %}
+
+{% block head %}
+<script>
+  function copyText() {
+      var text = document.getElementById("result");
+      text.select();
+      text.setSelectionRange(0, 99999); /* For mobile devices */
+      document.execCommand("copy");
+  }
+
+  function cancelEdit() {
+      var text = document.getElementById("result");
+      text.value = text.defaultValue;
+  }
+</script>
+{% endblock %}
+
+{% block body %}
+Your Decoy Link was generated:
+
+<p>
+  <input type="url" value="{{ url }}" id="result" oninput="cancelEdit()">
+  <button onclick="copyText()">Copy</button>
+</p>
+
+{% endblock %}

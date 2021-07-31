@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>Decoy Link</title>
+	{% block head %}{% endblock %}
+    <meta charset="utf-8">
+    <meta name="description" content="Please Unban is an easy ban appeal service for your Discord server.">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Create redirect links with custom previews for social media">
+    <link href="/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <h2>{% block title %}{% endblock %}</h2>
+    {% block body %}{% endblock %}
+
+    <footer>
+      <a href="/">Main Page</a>
+      |
+      <a href="https://github.com/JohnnyJayJay/decoy-link">GitHub</a>
+    </footer>
+  </body>
+</html>
