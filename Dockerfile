@@ -1,4 +1,4 @@
-FROM johnnyjayjay/leiningen:openjdk11
+FROM johnnyjayjay/leiningen:openjdk11 AS build
 WORKDIR /usr/src/decoy-link
 COPY . .
 RUN lein ring uberjar
