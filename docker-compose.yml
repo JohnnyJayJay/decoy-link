@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  server:
+    build: .
+    ports:
+      - "7780:5000"
+    environment:
+      DL_BASE_URL: "http://example.com"
