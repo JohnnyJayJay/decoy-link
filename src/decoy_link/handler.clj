@@ -26,8 +26,8 @@
   (GET "/link/:id" [id]
        (when-some [data (@redirects id)]
          (selmer/render-file "redirect.html" data)))
-  (route/files "/" {:root (str "resources/" file-root)})
+  (route/files "/" {:root file-root})
   (route/not-found "Not Found"))
 
 (def app
-  (-> app-routes  wrap-keyword-params wrap-params logger/wrap-with-logger))
+  (-> app-routes wrap-keyword-params wrap-params logger/wrap-with-logger))
