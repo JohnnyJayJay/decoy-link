@@ -12,7 +12,6 @@
 (def file-root (or (System/getenv "DL_FILE_ROOT") "public"))
 (def base-url (System/getenv "DL_BASE_URL"))
 
-(selmer/cache-off!)
 (selmer/set-resource-path! (or (System/getenv "DL_TEMPLATE_PATH") (str file-root "/templates")))
 
 (def redirects (atom {}))
