@@ -1,10 +1,23 @@
 <!DOCTYPE HTML>
 <html>
   <head>
+    <title>{{ title }}</title>
+    <description>{{ desc }}</description>
+
+    <!-- Open graph tags  -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ title }}">
     <meta property="og:description" content="{{ desc }}">
     <meta property="og:image" content="{{ img }}">
+
+    <!-- Twitter tags  -->
+    <meta name="twitter:card" content="{% if large-img %}summary_large_image{% else %}summary{% endif %}">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ desc }}">
+    <meta name="twitter:image" content="{{ img }}">
+
+    <meta name="theme-color" content="{{ color }}">
+
     <meta http-equiv="Refresh" content="0; url='{{ redirect }}'" />
   </head>
   <body>
